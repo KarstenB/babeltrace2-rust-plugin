@@ -1,0 +1,25 @@
+# Copyright 2023 - 2023, Karsten Becker and the rust babeltrace2-plugin contributors
+# SPDX-License-Identifier: GPL-2.0-or-later
+[package]
+name = "babeltrace2_plugin"
+version = "0.1.0"
+authors = ["Karsten Becker <kb@kbec.dev>"]
+edition = "2021"
+description = "A wrapper for libbabeltrace2 to develop a plugin for Babeltrace2"
+repository = "https://github.com/KarstenB/babeltrace2-rust-plugin"
+license = "GPL-2.0-or-later"
+keywords = ["tracing", "lttng", "babeltrace2"]
+categories = ["api-bindings"]
+links = "babeltrace2"
+
+[build-dependencies]
+bindgen = "0.63.0"
+cc = "1.0.79"
+regex = "1.7.1"
+
+[dependencies]
+lazy_static = "1.4.0"
+num = "0.4.0"
+num-derive = "0.3.3"
+num-traits = "0.2.15"
+regex = "1.7.1"
