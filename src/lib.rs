@@ -131,7 +131,7 @@ pub fn drop_data(comp: &mut dyn ToSelfComponent){
 #[cfg(test)]
 mod tests {
     mod code_gen;
-    use std::path::PathBuf;
+    use std::{path::PathBuf, fs};
 
     use code_gen::{generate_bt_lib, to_camel_case};
 
@@ -140,7 +140,9 @@ mod tests {
         let p = PathBuf::from(concat!(env!("OUT_DIR"), "/bindings.rs"));
         assert!(p.exists());
         let out = PathBuf::from("src/bt2.rs");
-        let count = generate_bt_lib(&p, &out);
+        let doc = PathBuf::from("src/bt2_doc.rs");
+        let doc_str=fs::read_to_string(doc).expect("Failed to read documentation file");
+        let count = generate_bt_lib(&p, &out, &doc_str);
         assert_eq!(count.unwrap(), 656);
     }
 

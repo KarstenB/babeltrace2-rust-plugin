@@ -7,6 +7,7 @@ authors = ["Karsten Becker <kb@kbec.dev>"]
 edition = "2021"
 description = "A wrapper for libbabeltrace2 to develop a plugin for Babeltrace2"
 repository = "https://github.com/KarstenB/babeltrace2-rust-plugin"
+homepage = "https://github.com/KarstenB/babeltrace2-rust-plugin"
 license = "GPL-2.0-or-later"
 keywords = ["tracing", "lttng", "babeltrace2"]
 categories = ["api-bindings"]
